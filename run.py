@@ -16,6 +16,7 @@ params = Parameters(
     input_households="./tests/data/baseline_household_demographics.csv"
 )
 params.set_param( "n_total", 10000)
+params.set_param( "app_turn_on_time", 10)
 
 model = simulation.COVID19IBM(model = Model(params))
 sim   = simulation.Simulation(env = model, end_time = 100 )
